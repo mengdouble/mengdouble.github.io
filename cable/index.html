@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天缆智联——智能特种线缆平台 | 天缆智联</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .bg-red { background-color: #8C0000; }
+        .text-red { color: #8C0000; }
+        .border-red { border-color: #8C0000; }
+        .bg-pku-red { background-color: #8C0000; }
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            background: rgba(15, 23, 42, 0.85);
+        }
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-card {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        .animate-card:nth-child(1) { animation-delay: 0.1s; }
+        .animate-card:nth-child(2) { animation-delay: 0.2s; }
+        .animate-card:nth-child(3) { animation-delay: 0.3s; }
+        .animate-card:nth-child(4) { animation-delay: 0.4s; }
+        .animate-card:nth-child(5) { animation-delay: 0.5s; }
+        .animate-card:nth-child(6) { animation-delay: 0.6s; }
+        .hover-card {
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        .hover-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px -12px rgba(140, 0, 0, 0.3);
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col">
+    <header class="fixed top-0 left-0 w-full z-50 nav-blur text-white shadow-lg">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl font-serif font-bold tracking-wider">天缆智联</span>
+                <span class="text-xs text-gray-400 hidden sm:inline">· TIANLAN SMART</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="/cable/" class="hover:text-red-300 transition pb-1 font-bold">首页</a>
+                <a href="/cable/about/" class="hover:text-red-300 transition pb-1">关于我们</a>
+                <a href="/cable/products/" class="hover:text-red-300 transition pb-1">产品中心</a>
+                <a href="/cable/params/" class="hover:text-red-300 transition pb-1">性能参数</a>
+                <a href="/cable/pricing/" class="hover:text-red-300 transition pb-1">价格方案</a>
+                <a href="/cable/lifecycle/" class="hover:text-red-300 transition pb-1">全生命周期</a>
+                <a href="/cable/contact/" class="hover:text-red-300 transition pb-1">销售服务</a>
+            </div>
+            <a href="/cable/contact/"
+               class="bg-[#8C0000] hover:bg-red-800 text-white text-sm px-5 py-2 rounded-full transition shadow-lg shadow-red-900/30">
+               立即咨询
+            </a>
+        </nav>
+    </header>
+    <main class="flex-grow pt-20">
+        
+
+<div class="relative h-[500px] md:h-[600px] overflow-hidden">
+    
+    <div class="absolute inset-0" id="bannerCarousel">
+        <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://mengdouble.github.io/images/banner1.jpg'); opacity: 1;"></div>
+        <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://mengdouble.github.io/images/banner2.jpg'); opacity: 0;"></div>
+        <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://mengdouble.github.io/images/banner3.jpg'); opacity: 0;"></div>
+    </div>
+    
+    <div class="absolute inset-0 bg-black/50"></div>
+    
+    <div class="relative z-10 flex items-center justify-center h-full px-4 text-center text-white">
+        <div class="max-w-4xl">
+            <span class="inline-block bg-red-500/20 text-red-300 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wider">国产替代 · 新质生产力</span>
+            <h1 class="text-4xl lg:text-6xl font-serif font-bold leading-tight">天缆智联</h1>
+            <p class="mt-4 text-gray-300 max-w-2xl mx-auto leading-relaxed text-lg">面向商业航天、低空经济与新能源装备的智能特种线缆平台</p>
+            <p class="mt-2 text-gray-400 text-sm">打造国产高可靠智能特种线缆全生命周期解决方案</p>
+            <div class="mt-8 flex justify-center gap-4">
+                <a href="/cable/contact/" class="bg-[#8C0000] hover:bg-red-800 text-white px-8 py-3 rounded-full font-medium transition shadow-xl shadow-red-900/30">立即咨询</a>
+                <a href="/cable/contact/" class="border border-gray-400 text-gray-300 hover:border-white hover:text-white px-8 py-3 rounded-full font-medium transition">预约洽谈</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function nextSlide() {
+        slides.forEach((slide, index) => {
+            slide.style.opacity = index === currentSlide ? '1' : '0';
+        });
+        currentSlide = (currentSlide + 1) % totalSlides;
+    }
+
+    setInterval(nextSlide, 4000);
+</script>
+
+
+<div class="max-w-7xl mx-auto px-4 -mt-10 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:border-red-500/30 transition hover:shadow-xl cursor-pointer" onclick="window.location='/cable/skylink/'">
+            <div class="text-4xl mb-3">🚀</div>
+            <h3 class="font-bold text-lg text-gray-900">SkyLink · 商业航天</h3>
+            <p class="text-gray-500 text-sm mt-2">火箭、卫星、深空探测用耐辐照耐高温线缆</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:border-red-500/30 transition hover:shadow-xl cursor-pointer" onclick="window.location='/cable/wingflex/'">
+            <div class="text-4xl mb-3">✈️</div>
+            <h3 class="font-bold text-lg text-gray-900">WingFlex · 低空经济</h3>
+            <p class="text-gray-500 text-sm mt-2">eVTOL、无人机用超柔耐弯折线缆</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:border-red-500/30 transition hover:shadow-xl cursor-pointer" onclick="window.location='/cable/powerflex/'">
+            <div class="text-4xl mb-3">⚡</div>
+            <h3 class="font-bold text-lg text-gray-900">PowerFlex · 新能源装备</h3>
+            <p class="text-gray-500 text-sm mt-2">风电、储能、机器人用耐高压智能线缆</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="max-w-7xl mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-serif font-bold text-gray-900">平台服务</h2>
+        <p class="text-gray-500 mt-2">从产品到运维，全生命周期覆盖</p>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="animate-card hover-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 flex flex-col">
+            <div class="p-6 flex-1">
+                <h3 class="text-xl font-serif font-bold text-gray-900">产品中心</h3>
+                <p class="text-sm text-gray-500 mt-3">三大系列产品，覆盖商业航天、低空经济与新能源装备全场景</p>
+            </div>
+            <div class="px-6 pb-6">
+                <a href="https://mengdouble.github.io/cable/products/" class="inline-flex items-center text-sm font-medium text-[#8C0000] group">查看详情 <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+        </div>
+        
+        <div class="animate-card hover-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 flex flex-col">
+            <div class="p-6 flex-1">
+                <h3 class="text-xl font-serif font-bold text-gray-900">价格方案</h3>
+                <p class="text-sm text-gray-500 mt-3">透明定价，按需定制。量大从优，长期合作可享年度协议价</p>
+            </div>
+            <div class="px-6 pb-6">
+                <a href="https://mengdouble.github.io/cable/pricing/" class="inline-flex items-center text-sm font-medium text-[#8C0000] group">查看详情 <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+        </div>
+        
+        <div class="animate-card hover-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 flex flex-col">
+            <div class="p-6 flex-1">
+                <h3 class="text-xl font-serif font-bold text-gray-900">全生命周期服务体系</h3>
+                <p class="text-sm text-gray-500 mt-3">从材料设计到回收再利用，覆盖电缆全生命周期的六大服务环节</p>
+            </div>
+            <div class="px-6 pb-6">
+                <a href="https://mengdouble.github.io/cable/lifecycle/" class="inline-flex items-center text-sm font-medium text-[#8C0000] group">查看详情 <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+        </div>
+        
+        <div class="animate-card hover-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 flex flex-col">
+            <div class="p-6 flex-1">
+                <h3 class="text-xl font-serif font-bold text-gray-900">售后服务</h3>
+                <p class="text-sm text-gray-500 mt-3">专业售后团队，全流程保障</p>
+            </div>
+            <div class="px-6 pb-6">
+                <a href="https://mengdouble.github.io/cable/service/" class="inline-flex items-center text-sm font-medium text-[#8C0000] group">查看详情 <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+        </div>
+        
+        <div class="animate-card hover-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 flex flex-col">
+            <div class="p-6 flex-1">
+                <h3 class="text-xl font-serif font-bold text-gray-900">核心性能参数</h3>
+                <p class="text-sm text-gray-500 mt-3">所有产品经国家权威检测，关键指标全面超越国内外同类产品</p>
+            </div>
+            <div class="px-6 pb-6">
+                <a href="https://mengdouble.github.io/cable/params/" class="inline-flex items-center text-sm font-medium text-[#8C0000] group">查看详情 <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+        </div>
+        
+        <div class="animate-card hover-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 flex flex-col">
+            <div class="p-6 flex-1">
+                <h3 class="text-xl font-serif font-bold text-gray-900">销售服务</h3>
+                <p class="text-sm text-gray-500 mt-3">在线联系、在线签订合同，全流程线上服务</p>
+            </div>
+            <div class="px-6 pb-6">
+                <a href="https://mengdouble.github.io/cable/contact/" class="inline-flex items-center text-sm font-medium text-[#8C0000] group">查看详情 <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+
+
+<div class="max-w-7xl mx-auto px-4 pb-16">
+    <div class="text-center mb-10">
+        <h2 class="text-3xl font-serif font-bold text-gray-900">关于我们</h2>
+        <p class="text-gray-500 mt-2">了解天缆智联的团队与成就</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+        <div class="animate-card hover-card bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/60 border border-gray-100 hover:border-red-500/30 transition hover:shadow-2xl">
+            <div class="relative h-48 bg-gradient-to-r from-[#8C0000] to-[#a00000] flex items-center justify-center">
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div class="relative z-10 text-center text-white">
+                    <div class="text-5xl mb-2">🏢</div>
+                    <h3 class="text-2xl font-serif font-bold">天缆智联 · 关于我们</h3>
+                    <p class="text-white/80 text-sm mt-1">团队介绍 · 荣誉成就 · 合作伙伴</p>
+                </div>
+            </div>
+            <div class="p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center p-4 bg-gray-50 rounded-xl hover:bg-red-50 transition">
+                        <div class="text-3xl mb-2">👥</div>
+                        <h4 class="font-bold text-gray-900">核心团队</h4>
+                        <p class="text-sm text-gray-500 mt-1">航天、AI、材料领域<br>顶尖人才汇聚</p>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-xl hover:bg-red-50 transition">
+                        <div class="text-3xl mb-2">🏆</div>
+                        <h4 class="font-bold text-gray-900">荣誉成就</h4>
+                        <p class="text-sm text-gray-500 mt-1">多项行业大奖<br>核心技术专利</p>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-xl hover:bg-red-50 transition">
+                        <div class="text-3xl mb-2">🤝</div>
+                        <h4 class="font-bold text-gray-900">合作伙伴</h4>
+                        <p class="text-sm text-gray-500 mt-1">航天、航空、电力<br>行业头部企业</p>
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <a href="/cable/about/" class="inline-flex items-center gap-2 bg-[#8C0000] hover:bg-red-800 text-white px-8 py-3 rounded-full font-medium transition shadow-lg shadow-red-900/30">
+                        了解更多 →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+    <footer class="bg-[#8C0000] text-white text-xs py-8 px-8 mt-12 text-center space-y-2">
+        <p class="font-serif tracking-widest text-sm">版权所有 © 天缆智联</p>
+        <p>地址：安徽省芜湖市</p>
+        <p>技术支持：Hugo + Tailwind CSS</p>
+    </footer>
+</body>
+</html>
